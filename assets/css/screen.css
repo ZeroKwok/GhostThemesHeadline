@@ -2,11 +2,13 @@
 @import "fonts.css";
 
 :root {
-    --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
-    --font-serif: Lora, Georgia, Times, serif; /* stylelint-disable-line value-keyword-case */
+    --font-sans: -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Inter, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
+    --font-serif: -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Lora, Georgia, Times, Arial; /* stylelint-disable-line value-keyword-case */
     --head-nav-gap: 32px;
     --color-primary-text: var(--color-darker-gray);
     --h1-size: 4.4rem;
+    --content-font-size: 1.6rem;
+    --code-font-size: 14px;
 }
 
 figcaption {
@@ -200,7 +202,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .gh-topic-grid .gh-card-excerpt {
     margin-top: 12px;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 .gh-topic-grid .gh-card.no-image.large .gh-card-excerpt {
@@ -332,7 +334,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .gh-article-excerpt {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
 }
 
 .has-full-image .gh-article-excerpt {
@@ -591,7 +593,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .gh-subscribe {
     margin-top: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -607,7 +609,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .gh-subscribe-description {
     margin-top: 16px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     white-space: break-spaces;
 }
 
@@ -633,9 +635,9 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 /* Site footer */
 
 .gh-foot {
-    padding-top: 80px;
-    padding-bottom: 120px;
-    margin-top: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
     background-color: var(--color-darker-gray);
 }
 
@@ -680,7 +682,12 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .gh-subscribe ~ .gh-copyright {
-    margin-top: 64px;
+    margin-top: 0px;
+}
+
+/* code font size */
+code[class*=language-] {
+    font-size: var(--code-font-size, 14px) !important;
 }
 
 /* Media queries */
@@ -766,9 +773,13 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         margin-top: 64px;
     }
 
+    .gh-content {
+        font-size: 1.5rem;
+    }
+
     .gh-foot {
         padding-top: 64px;
-        padding-bottom: 160px;
+        padding-bottom: 20px;
         margin-top: 64px;
     }
 
@@ -794,6 +805,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
     .gh-copyright {
         margin-top: 32px;
+    }
+
+    code[class*=language-] {
+        font-size: 12px !important;
     }
 }
 
